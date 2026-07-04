@@ -8,60 +8,118 @@
 <body>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             background-color: black;
             font-family: Arial, sans-serif;
-            margin: 20px;
+            margin: 0;
+            padding: 20px;
             color: white;
+            line-height: 1.5;
+        }
+
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .profile {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .profile-text {
+            flex: 1 1 320px;
         }
 
         h1 {
-            color:white;
+            color: white;
             text-decoration: underline;
+            margin-top: 0;
         }
 
         h2 {
             color: white;
+            margin-top: 24px;
         }
 
         .ich {
-            right: 0;
-            position: absolute;
-            width: 300px;
+            width: min(280px, 100%);
             height: auto;
-            top: 20px;
+            border-radius: 8px;
+            flex: 0 0 auto;
         }
 
-        
+        ul {
+            padding-left: 20px;
+            margin: 8px 0;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+
+            .profile {
+                flex-direction: column;
+            }
+
+            .ich {
+                width: 100%;
+                max-width: 260px;
+            }
+        }
     </style>
 
-    <img class="ich" src="shira web bild1.jpeg" alt="shira">
-    
+    <div class="page">
+        <div class="profile">
+            <div class="profile-text">
+                <h1>Shira</h1>
 
-    <h1>Shira</h1>
+                <h2>Über mich</h2>
+                <p>Ich habe:</p>
+                <ul>
+                    <li>ich habe eine Große Fresse</li>
+                    <li>ich habe Kein Selbstbewusst sein</li>
+                    <li>ich habe Keine Ahnung von irgendwas</li>
+                    <li>ich habe Humor</li>
+                    <li>ich habe lust am Schreiben/Telefonieren</li>
+                    <li>ich habe keine Ahnung von Schule (Mathe)</li>
+                    <li>ich habe bock mit Freunden raus zu Gehen</li>
+                </ul>
+            </div>
 
-    <h2>Über mich</h2>
-    <p>Ich habe:</p><br>
-    1. ich habe eine Große Fresse<br>
-    2. ich habe Kein Selbstbewusst sein<br>
-    3. ich habe Keine Ahnung von irgendwas<br>
-    4. ich habe Humor<br>
-    5. ich habe lust am Schreiben/Telefonieren <br>
-    6. ich habe keine Ahnung von Schule(Mathe)<br>
-    7.ich habe bock mit Freunden raus zu Gehen <br>
+            <img class="ich" src="shira web bild1.jpeg" alt="shira">
+        </div>
 
-    <h2>Meine Hobbys(merken Plural)</h2>
-    1. Essen<br>
-    2. schlafen<br>
-    3. Musik hören<br>
-    4. mit Freunden raus gehen<br>
-    5.Schlafen<br>
-    6. und essen<br>
+        <h2>Meine Hobbys (merken Plural)</h2>
+        <ul>
+            <li>Essen</li>
+            <li>schlafen</li>
+            <li>Musik hören</li>
+            <li>mit Freunden raus gehen</li>
+            <li>Schlafen</li>
+            <li>und essen</li>
+        </ul>
 
-    <h2>Aussehen</h2>
-    1. Ich habe braune Haare<br>
-    2. Augenfarbe: Grün-Braun<br>
-    3. ich bin 1,60m groß<br>
+        <h2>Aussehen</h2>
+        <ul>
+            <li>Ich habe braune Haare</li>
+            <li>Augenfarbe: Grün-Braun</li>
+            <li>ich bin 1,60m groß</li>
+        </ul>
+    </div>
     
 </body>
 </html>
